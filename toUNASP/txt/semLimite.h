@@ -19,7 +19,7 @@
     return 1;
 
 }
-int ler(FILE * file ){
+int mostrarNaTela(FILE * file ){
     char x [2];
     int i = 0;
     x[1]='\0';
@@ -38,5 +38,11 @@ int ler(FILE * file ){
     fclose(file);
     return 1;
 }
-
+int comparar(char *letra_1, char *letra_2){
+    if( letra_1 == letra_2  ){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 #endif

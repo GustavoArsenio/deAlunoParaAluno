@@ -18,7 +18,7 @@ int main () {
 
 }
 void chamaLeitura(){
-if( ler(fopen( "./umTexto.txt" , "a+"))){
+if( mostrarNaTela(fopen( "./umTexto.txt" , "a+"))){
 
         printf("\n ** ler - semLimites WORKS **\n");
 
