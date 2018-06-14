@@ -3,10 +3,10 @@
 #include <string.h>
 
 int main(){
-    int compararArquivos(FILE *salvou,FILE *bdTXT);
+    int compararArquivos(FILE *salvou,FILE *bdTXT,int aux);
 
     printf("Digite seu usuario: ");
-    escrever(fopen("./bdLogins.txt","w"),0);
+    escrever(fopen("./bdLogins.txt","w+"),0);
     printf("\nDigite a senha: ");
     escrever(fopen("./bdLogins.txt","a+"),1);
     system("cls");
@@ -23,15 +23,18 @@ int main(){
     escrever(fopen("./tentar.txt","w"),0);
     printf("\nDigite a senha: ");
     escrever(fopen("./tentar.txt","a+"),1);
-    compararArquivos(salvar,arquivo);
-
+    compararArquivos(salvar,arquivo,0);
+    system("pause");
 }
-int compararArquivos(FILE *salvou,FILE *bdTXT){
+int compararArquivos(FILE *salvou,FILE *bdTXT,int aux){
     char i[2],j[2];
+    int EL=0;
     i[1]='\0';
     j[1]='\0';
     int nomeValidar[2]= {1,0};
-    while( (i[0] = fgetc(salvou) ) != EOF && ( j[0]= fgetc(bdTXT) ) != EOF ){
+
+
+    while( (i[0] = fgetc(salvou) ) != '\0' && ( j[0]= fgetc(bdTXT) ) != '\0' && j[0] != EOF){
         if(i[0] != j[0]){
             nomeValidar[0]=0;
             break;
@@ -43,7 +46,7 @@ int compararArquivos(FILE *salvou,FILE *bdTXT){
     if(nomeValidar[0] && nomeValidar[2]){
         printf("*** Login Valido***");
     }else{
-        printf("*** Login Invalido***");
+        (j[0]=EOF)? printf("*** Login Invalido***") : compararArquivos(salvou,bdTXT,++aux);
     }
 
 }

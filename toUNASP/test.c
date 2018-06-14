@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "./"
 int main(){
 char nome[32];
 char nome2[]="Gusta\0o3";
