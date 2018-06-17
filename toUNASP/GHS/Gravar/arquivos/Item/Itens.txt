@@ -1,0 +1,7 @@
+CPU                                            
+Monitor                                        
+Teclado                                        
+Mouse                                          
+Notebook                                       
+Celular                                        
+Tablet                                         
