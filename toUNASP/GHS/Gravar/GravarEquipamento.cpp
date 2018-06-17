@@ -44,7 +44,7 @@ int main()
 	n:
 	textcolor(2);printf("Digite o COD do novo equipamento:\n");	textcolor(7);
 	scanf("%s",&Cod);
-	sprintf(Caminho, ".\\Arquivos\\Cod\\CODs.txt");//caminho onde procurar a palavra
+	sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Cod\\CODs.txt");//caminho onde procurar a palavra
 	arquivo = fopen (Caminho, "r+");
 
 		while((fscanf(arquivo,"%s", &txt))!=EOF){ //verifica se a palavra ja ta no txt
@@ -71,7 +71,7 @@ ITENS:
 		textcolor(2);printf("\n Escolha qual Tipo do Item  : \n");textcolor(7);
 			i=1	;
 
-				sprintf(Caminho, ".\\Arquivos\\Item\\Itens.txt");
+				sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Item\\Itens.txt");
 		 		arquivo = fopen (Caminho, "r+"); 
 		 		textcolor(10);	printf("1");	textcolor(7);
 		 		printf(" Adicionar Outro Tipo\n");
@@ -107,7 +107,7 @@ ITENS:
 		else{
 		
 			quero=quero-1;
-			sprintf(Caminho, ".\\Arquivos\\Item\\Itens.txt");//caminho onde procurar a palavra
+			sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Item\\Itens.txt");//caminho onde procurar a palavra
 			arquivo = fopen (Caminho, "r+");
 			procurapalavra(arquivo,quero,palavra);
 					strcpy(Nitem,palavra);
@@ -131,7 +131,7 @@ MARCAS:
 		textcolor(2);printf("\n Escolha qual a MARCA do Item  : \n");textcolor(7);
 			i=1	;
 
-				sprintf(Caminho, ".\\Arquivos\\Marca\\Marcas.txt");
+				sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Marca\\Marcas.txt");
 		 		arquivo = fopen (Caminho, "r+"); 
 		 		textcolor(10);	printf("1");	textcolor(7);
 		 		printf(" Adicionar Outra MARCA\n");
@@ -165,7 +165,7 @@ MARCAS:
 		} 
 	
 		quero=quero-1;
-		sprintf(Caminho, ".\\Arquivos\\Marca\\Marcas.txt");//caminho onde procurar a palavra
+		sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Marca\\Marcas.txt");//caminho onde procurar a palavra
 		arquivo = fopen (Caminho, "r+");
 		procurapalavra(arquivo,quero,palavra);
 		fclose(arquivo); 
@@ -187,7 +187,7 @@ MARCAS:
 
 
 				FILE *arquivo;
-				sprintf(Caminho, ".\\arquivos\\Item\\%s.txt",Nitem);
+				sprintf(Caminho, ".\\arquivos\\Equipamentos\\Item\\%s.txt",Nitem);
  				arquivo = fopen (Caminho, "r+");
   					 while((fscanf(arquivo,"%s", &txt))!=EOF){ //verifica se o novo nome ja nao existe na lista
   		
@@ -201,7 +201,7 @@ MARCAS:
    					  }
             
     
-				sprintf(Caminho, ".\\arquivos\\Marca\\%s.txt",Nitem);
+				sprintf(Caminho, ".\\arquivos\\Equipamentos\\Marca\\%s.txt",Nitem);
  				arquivo = fopen (Caminho, "r+");
   					 while((fscanf(arquivo,"%s", &txt))!=EOF){ //verifica se o novo nome ja nao existe na lista
   	
@@ -216,24 +216,24 @@ MARCAS:
             
 							//Grava tuto
 						
-							sprintf(Caminho, ".\\arquivos\\Item\\%s.txt",Nitem);	//grava um txt com o nome do item e as marcas deste item dentro
+							sprintf(Caminho, ".\\arquivos\\Equipamentos\\Item\\%s.txt",Nitem);	//grava um txt com o nome do item e as marcas deste item dentro
 							arquivo = fopen (Caminho, "a+");
 							fprintf(arquivo, "%s\n",Cod);
 							fprintf(arquivo, "%s\n",Nmarca);
 							
 							fclose(arquivo);
 							
-							sprintf(Caminho, ".\\arquivos\\Marca\\%s.txt",Nmarca); //grava um txt com o nome da marcas e os itens dentro desta maraca dentro
+							sprintf(Caminho, ".\\arquivos\\Equipamentos\\Marca\\%s.txt",Nmarca); //grava um txt com o nome da marcas e os itens dentro desta maraca dentro
 							arquivo = fopen (Caminho, "a+");
 							fprintf(arquivo, "%s\n",Cod);
 							fprintf(arquivo, "%s\n",Nitem);
 							fclose(arquivo);
 							
-							sprintf(Caminho, ".\\Arquivos\\Cod\\CODs.txt",Cod);//grava dentro do txt CODs o novo CODs
+							sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Cod\\CODs.txt",Cod);//grava dentro do txt CODs o novo CODs
 							arquivo = fopen (Caminho, "a+");
 							fprintf(arquivo, "%s\n",Cod);
 							fclose(arquivo);
-							sprintf(Caminho, ".\\Arquivos\\Cod\\%s.txt",Cod); //grava um txt com o nome do COD com o nome da marca e do item deste DOD dentro
+							sprintf(Caminho, ".\\Arquivos\\Equipamentos\\Cod\\%s.txt",Cod); //grava um txt com o nome do COD com o nome da marca e do item deste DOD dentro
 							arquivo = fopen (Caminho, "a+");
 							fprintf(arquivo, "%s\n",Nitem);
 							fprintf(arquivo, "%s\n",Nmarca);
