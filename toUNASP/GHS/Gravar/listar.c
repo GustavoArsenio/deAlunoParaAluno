@@ -5,11 +5,19 @@ int main(){
     void showItens();
     void showMarcas();
     void showCods();
+    void mostrar2Letras(void);
+    printf(" \t\t *************************************************************  \t\t");
+
+    mostrar2Letras();
+  /*
     showMarcas();
-    printf(" \n\n****************************************************************** \n\n");
+
+    printf(" \n\n ****************************************************************** \n\n");
     showItens();
-    printf(" \n\n****************************************************************** \n\n");
+    printf(" \n\n ****************************************************************** \n\n");
     showCods();
+    */
+
 }
 void showMarcas(){
     int mostrarConteudoTXT(FILE * file);

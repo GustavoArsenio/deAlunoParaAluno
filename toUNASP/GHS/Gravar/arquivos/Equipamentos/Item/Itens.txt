@@ -1,7 +1,7 @@
-CPU                                            
-Monitor                                        
-Teclado                                        
-Mouse                                          
-Notebook                                       
-Celular                                        
-Tablet                                         
+ CPU                                             
+Monitor                                         
+Teclado                                         
+Mouse                                           
+Notebook                                        
+Celular                                         
+Tablet                                          
