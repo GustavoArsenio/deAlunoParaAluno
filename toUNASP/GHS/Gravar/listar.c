@@ -5,10 +5,23 @@ int main(){
     void showItens();
     void showMarcas();
     void showCods();
-    void mostrar2Letras(void);
-    printf(" \t\t *************************************************************  \t\t");
+    void mostrar2Letras(FILE * file);
+    printf("\n \t\t ****************************  Marcas  *********************************  \t\t \n");
 
-    mostrar2Letras();
+    mostrar2Letras(fopen(".\\arquivos\\Equipamentos\\Marca\\Marcas.txt","r"));
+
+    printf("\n \t\t *************************************************************  \t\t\n\n");
+    printf("\n \t\t ****************************  Itens  *********************************  \t\t\n\n");
+
+    mostrar2Letras(fopen(".\\arquivos\\Equipamentos\\Item\\Itens.txt","r"));
+
+    printf(" \n\t\t *************************************************************  \t\t\n\n");
+    printf("\n \t\t ********************************  Cods  *****************************  \t\t\n\n");
+
+    showCods();
+
+    printf("\n \t\t *************************************************************  \t\t\n\n");
+
   /*
     showMarcas();
 

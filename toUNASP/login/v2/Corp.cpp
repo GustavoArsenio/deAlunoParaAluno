@@ -80,7 +80,7 @@ int moudura(string nome){
     printf("\n\n");
 }
 
-int login(int TipoLog)
+int login()
 {
     int cadLogin(FILE *arquivoLogin);
     int montarLogin();
@@ -88,17 +88,14 @@ int login(int TipoLog)
     int excluir(int linha, FILE * arg);
     int valido;
 
-		     printf("\t\t\t *** Login *** \n");
-    cadLogin(fopen("./toLogin.txt","w"));//login
-    montarLogin();//retorna o login valido ou n 
-
 	printf("\t\t\t *** Login *** \n");
     cadLogin(fopen("./toLogin.txt","w"));//login
-    valido=(montarLogin());//retorna o login valido ou n 
-	printf("\n \n \n %d",valido);
+    valido=(montarLogin());//retorna o login valido ou n
+	printf("\n \n \n  >>>> %d <<<<< \n\n\n\n",valido);//No CodeBlovks está funcionandp perfeitamente
+    return valido;
 }
-	
-		  
+
+
 
 int main ()
 {
@@ -106,13 +103,13 @@ int main ()
 
  int interna, i, op,TipoLog;
 	float div,r;
-	
-	login(TipoLog);
-	
-	
-	
-switch(TipoLog){
-	case 1:
+
+	TipoLog = login();
+
+
+
+    switch(TipoLog){
+        case 1:
 				menu:
   			  system("cls.");
   			  string nome = " LOCMOB  ADMINISTRADOR ";
@@ -156,7 +153,7 @@ switch(TipoLog){
 
    			 printf("\n Escolha uma das operacoes : ");
     		scanf("%d", &op);
-    
+
   		switch (op)
  			 {
 				 case 1 :
@@ -172,7 +169,7 @@ switch(TipoLog){
      			system("start Locar.exe");
 
 	 			break;
- 
+
      			case 4 :
      		 	system("exit");
 		     	system("start Devolver.exe");
@@ -181,17 +178,17 @@ switch(TipoLog){
     			system("exit");
 
   		       	 break;
-  	 
+
    				default :
    				  	 printf ("Operacao invalida!\n");
    			   		goto menu;
 			}
-			
+
 		break;
-	
-	
-				
-	
+
+
+
+
   }
 
 

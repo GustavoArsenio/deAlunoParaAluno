@@ -1,21 +1,14 @@
 int mostrarConteudoTXT(FILE * file ){
     char x [2];
-    int i = 1, sequencia=0;
     x[1]='\0';
-    printf("%i\t",i);
     while((x[0] = fgetc(file) ) != EOF ){
         printf("%s",x);
-        if( x[0] == '\n' ){
-            i++;
-            printf("%i\t",i);
-        }
     }
     printf("\n\n");
     return 1;
 }
 
-void mostrar2Letras(void){
-    FILE * file = fopen(".\\arquivos\\Equipamentos\\Marca\\Marcas.txt","r");
+void mostrar2Letras(FILE * file){
     char x[4];
     int i =1;
     x[2] ='\0';
