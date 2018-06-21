@@ -1,2 +1,0 @@
-se os numeros ficam juntos, é impossivel saber se é dez ou um e outro zero
-10 != 1 0
