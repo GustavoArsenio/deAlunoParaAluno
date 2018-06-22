@@ -11,18 +11,18 @@ int main (){
     int excluir(int linha, FILE * arg);
 
     printf("\t\t\t *** Cadastro *** \n");
-    cadLogin(fopen("./toLogon.txt","a+"));
+    cadLogin(fopen("./toLogon.txt","a+"));//cadastra
 
     printf("\t\t\t *** Login *** \n");
-    cadLogin(fopen("./toLogin.txt","w"));
-    montarLogin();
+    cadLogin(fopen("./toLogin.txt","w"));//login
+    montarLogin();//retorna o login valido ou n 
 
 
     int linhaS = 0;
-    showLog(fopen("./toLogon.txt","a+"));
+    showLog(fopen("./toLogon.txt","a+"));// lista login
     printf("Digite qual item deseja excluir: ");
     scanf("%i",&linhaS);
-    excluir(linhaS, fopen("./toLogon.txt","r") );
-    showLog(fopen("./toLogon.txt","a+"));
+    excluir(linhaS, fopen("./toLogon.txt","r") );//exclui login
+    showLog(fopen("./toLogon.txt","a+"));//list dnv
 
 }

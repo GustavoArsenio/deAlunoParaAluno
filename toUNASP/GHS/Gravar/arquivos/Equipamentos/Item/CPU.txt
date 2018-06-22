@@ -2,3 +2,7 @@
 Dell
 6
 Lenovo
+1
+Dell
+666
+Philco
