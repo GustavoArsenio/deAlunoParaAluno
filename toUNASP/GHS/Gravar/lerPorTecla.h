@@ -27,4 +27,5 @@ void mostrar2Letras(FILE * file){
        if(x[2]!= '\0' && x[2]!= ' '){ printf("%c",x[2]); x[2] = '\0';}
        // printf("%c",x[2]);
     }
+    fclose(file);
 }

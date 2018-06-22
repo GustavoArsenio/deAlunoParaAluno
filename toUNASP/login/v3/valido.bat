@@ -1,0 +1,1 @@
+start ../../GHS/coorp.exe
