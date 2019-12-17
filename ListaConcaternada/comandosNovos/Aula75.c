@@ -8,13 +8,15 @@ double calcularArea( double Raio ){
 }
 
 int main(void){
-double calcularArea( double Raio );
+    
+    double calcularArea( double Raio );
 
-double Raio =0 ;
-printf("Digite o raio: ");
-scanf("%lf",&Raio);
+    double Raio =0 ;
+    
+    printf("Digite o raio: ");
+    scanf("%lf",&Raio);
 
-printf("A area do circulo e: %lf", calcularArea(Raio));
+    printf("A area do circulo e: %lf", calcularArea(Raio));
 
 }
 

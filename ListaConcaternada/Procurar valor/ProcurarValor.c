@@ -22,6 +22,7 @@ int main (void){
     struct lista *procurarValor( struct lista *pLista , int valor);
     struct lista m1,m2,m3;
     struct lista *resultado, *gancho = &m1;
+    
     int valor;
 
     m1.valor = 5;
